@@ -4,11 +4,16 @@ Python client for the hosted UnifyUnits Measurement API. Conversion values are
 sent as decimal strings to preserve precision; the package does not bundle
 conversion factors or private measurement data.
 
-## Install
+## Requirements and install
+
+Python 3.9 or newer is required. Install the first release directly from its
+GitHub tag:
 
 ```sh
-pip install unifyunits
+python -m pip install "unifyunits @ git+https://github.com/unifyunits/unifyunits-python.git@v0.1.0"
 ```
+
+After publication to PyPI, `python -m pip install unifyunits` can be used.
 
 ## Usage
 
@@ -37,4 +42,6 @@ pip install -e '.[test]'
 pytest
 ```
 
-Release and PyPI publication are separate steps.
+The test suite uses mocked HTTP responses and does not require a live API key.
+GitHub releases and PyPI publication are separate; this repository does not
+publish automatically to PyPI.
